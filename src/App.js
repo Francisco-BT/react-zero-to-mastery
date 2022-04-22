@@ -1,6 +1,4 @@
-import "./categories.styles.scss";
-
-import CategoryItem from "./components/CategoryItem/category-item.component";
+import Directory from "./components/directory/directory.component";
 
 const App = () => {
   const categories = [
@@ -31,13 +29,7 @@ const App = () => {
     },
   ];
 
-  return (
-    <div className="categories-container">
-      {categories.map((category) => (
-        <CategoryItem category={category} key={category.id} />
-      ))}
-    </div>
-  );
+  return <Directory categories={categories} />;
 };
 
 export default App;
